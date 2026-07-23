@@ -2,6 +2,10 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
+@app.route("/")
+def home():
+    return "Hello, app déployée avec succès 🚀"
+
 @app.route("/health")
 def health():
     return jsonify({"status": "ok c'est bien"})
