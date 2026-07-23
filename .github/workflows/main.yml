@@ -25,3 +25,5 @@ jobs:
       steps:
         - name: Simuler un déploiement
           run: echo "Déploiement en production simulé avec succès"
+        - name: Déclencher le déploiement sur Render
+          run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
